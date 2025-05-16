@@ -1,0 +1,52 @@
+[
+  { "name": "id", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "sentiment", "type": "STRING", "mode": "NULLABLE" },
+  {
+    "name": "categories",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+      { "name": "id", "type": "STRING", "mode": "NULLABLE" },
+      { "name": "name", "type": "STRING", "mode": "NULLABLE" }
+    ]
+  },
+  {
+    "name": "feed",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      { "name": "id", "type": "STRING", "mode": "NULLABLE" },
+      { "name": "name", "type": "STRING", "mode": "NULLABLE" }
+    ]
+  },
+  { "name": "date", "type": "TIMESTAMP", "mode": "NULLABLE" },
+  { "name": "msgId", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "type", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "media", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "text", "type": "STRING", "mode": "NULLABLE" },
+  {
+    "name": "user",
+    "type": "RECORD",
+    "mode": "NULLABLE",
+    "fields": [
+      { "name": "id", "type": "STRING", "mode": "NULLABLE" },
+      { "name": "username", "type": "STRING", "mode": "NULLABLE" },
+      { "name": "name", "type": "STRING", "mode": "NULLABLE" },
+      { "name": "followers", "type": "INTEGER", "mode": "NULLABLE" },
+      { "name": "friends", "type": "INTEGER", "mode": "NULLABLE" },
+      { "name": "gender", "type": "STRING", "mode": "NULLABLE" },
+      {
+        "name": "location",
+        "type": "RECORD",
+        "mode": "NULLABLE",
+        "fields": [
+          { "name": "country", "type": "STRING", "mode": "NULLABLE" },
+          { "name": "region", "type": "STRING", "mode": "NULLABLE" },
+          { "name": "subregion", "type": "STRING", "mode": "NULLABLE" }
+        ]
+      }
+    ]
+  },
+  { "name": "link", "type": "STRING", "mode": "NULLABLE" },
+  { "name": "parentId", "type": "STRING", "mode": "NULLABLE" }
+]
