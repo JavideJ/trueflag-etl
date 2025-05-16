@@ -1,0 +1,7 @@
+boto3==1.38.14
+google-cloud-bigquery==3.32.0
+numpy==2.2.5
+pandas==2.2.3
+pyarrow==20.0.0
+pytz==2025.2
+PyYAML==6.0.2
