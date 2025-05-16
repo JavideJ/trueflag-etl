@@ -1,0 +1,10 @@
+bucket:
+  bucket_name: 'nwt-data-engineer'
+  folders: ['Tweet']
+
+env-vars:
+  date_to_upload: '2024/08/04'   #para que coja el día actual, poner 'today'
+  project_id: 'trueflag-459814'
+
+bigquery:
+    raw_tweet_table: 'raw_tweet'
