@@ -1,0 +1,17 @@
+config {
+type: "table",
+schema: "tweet",
+tags: ["tweet"],
+description: "Tabla diaria con número de tweets agrupados por categoría."
+}
+
+SELECT
+DATE(date) AS tweet_date,
+category.name AS category_name,
+COUNT(DISTINCT id) AS tweet_count
+FROM
+trueflag-459814.tweet.raw_tweet,
+UNNEST(categories) AS category
+GROUP BY
+tweet_date,
+category_name

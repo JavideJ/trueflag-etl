@@ -1,0 +1,14 @@
+config {
+type: "table",
+schema: "tweet",
+tags: ["tweet"],
+description: "Mediana diaria de seguidores de los usuarios que publicaron tweets."
+}
+
+SELECT
+DATE(date) AS tweet_date,
+APPROX_QUANTILES(user.followers, 2)[OFFSET(1)] AS median_followers
+FROM
+trueflag-459814.tweet.raw_tweet
+GROUP BY
+tweet_date

@@ -1,0 +1,6 @@
+{
+"warehouse": "bigquery",
+"defaultDatabase": "trueflag-459814",
+"assertionSchema": "assertions",
+"vars": {}
+}

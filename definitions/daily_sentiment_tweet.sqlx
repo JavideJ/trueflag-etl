@@ -1,0 +1,16 @@
+config {
+type: "table",
+schema: "tweet", 
+tags: ["tweet"],
+description: "Tabla diaria con número de tweets agrupados por sentimiento."
+}
+
+SELECT
+DATE(date) AS tweet_date,
+sentiment,
+COUNT(DISTINCT id) AS tweet_count
+FROM
+trueflag-459814.tweet.raw_tweet
+GROUP BY
+tweet_date,
+sentiment
