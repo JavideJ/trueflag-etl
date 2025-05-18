@@ -2,7 +2,7 @@ env-vars:
   date_to_upload: '2024/08/08'   # 'today' -> carga los ficheros a fecha de hoy
                                  # 'all' -> carga todos los archivos de cualquier fecha
                                  # 'YYYY/MM/DD' -> carga los arhivos de una fecha específica
-  project_id: 'trueflag-459814'
+  project_id: '<tu_proyecto>'
   region: "europe-west1"
   credentials: "cred.json"
   
