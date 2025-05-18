@@ -1,5 +1,4 @@
 from google.cloud import bigquery
-import os
 import logging
 from etl.utils import print_error, print_success
 
