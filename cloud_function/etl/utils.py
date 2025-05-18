@@ -1,10 +1,11 @@
 import boto3
 from botocore.handlers import disable_signing
 import yaml
-import json
+import os
 from datetime import datetime
 import logging
 import re
+from google.cloud import bigquery
 
 def load_yaml_to_dict(filepath):
     """
