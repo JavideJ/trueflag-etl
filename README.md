@@ -21,7 +21,7 @@ Al tratarse de un repo privado, sólo aquellos que tengan acceso (o dispongan de
 6. En el archivo terraform/terraform.tfvars cambia las variables **project_id** y **service_account** por las tuyas y la variable **bucket_name** por un nombre de bucket nuevo, que no exista.<br><br>
 7. Comprime todos los archivos de la carpeta cloud_function en un archivo zip y guárdalo dentro de la carpeta cloud_function. Este archivo comprimido es el que se usará para desplegar la función en GCP.
    Después de esto ya tenemos todo lo necesario para iniciar el despliegue:<br><br>
-8. Desde la terminal ejecuta los siguientes comandos desde la raíz del proyecto:
+8. Desde la terminal ejecuta los siguientes comandos desde la raíz del proyecto:<br>
 `cd terraform`<br>
 `terraform init`<br>
 `terraform apply`<br><br>
