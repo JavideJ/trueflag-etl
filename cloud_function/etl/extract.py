@@ -15,11 +15,15 @@ def get_folder_path(date_to_upload, folder):
     
     Parámetros:"""
     if date_to_upload == 'today':   #idealmente entraría en este if
-        today = datetime.datetime.today()
+        today = datetime.today()
         day_to_upload = today.day
+        if len(str(day_to_upload))==1:
+            month_to_upload = f'0{day_to_upload}'
         month_to_upload = today.month
+        if len(str(month_to_upload))==1:
+            month_to_upload = f'0{month_to_upload}'
         year_to_upload = today.year
-        date_to_upload = f'{year_to_upload/month_to_upload/day_to_upload}'
+        date_to_upload = f'{year_to_upload}/{month_to_upload}/{day_to_upload}'
 
         folder_path = f'{folder}/{date_to_upload}/'
 
