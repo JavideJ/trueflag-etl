@@ -11,3 +11,7 @@ variable "bq_location" {
   type    = string
   default = "EU"          
 }
+
+variable "service_account" {
+  type    = string        
+}
