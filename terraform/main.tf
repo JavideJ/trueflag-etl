@@ -75,7 +75,7 @@ resource "google_bigquery_table" "raw_tweet" {
 }
 
 resource "google_storage_bucket" "cloud_function" {
-  name     = "cloud_function_trueflag_etl"
+  name     = var.bucket_name
   location = var.region
   force_destroy = true
 }
