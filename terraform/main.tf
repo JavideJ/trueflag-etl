@@ -105,7 +105,7 @@ resource "google_cloudfunctions2_function" "trueflag-etl" {
   service_config {
     available_memory = "1Gi"
     available_cpu    = "1"
-    service_account_email = "python@trueflag-459814.iam.gserviceaccount.com"
+    service_account_email = var.service_account
     max_instance_count = 3
     min_instance_count = 1
     timeout_seconds = 1000
@@ -130,7 +130,7 @@ resource "google_cloud_scheduler_job" "invoke_trueflag_etl" {
     uri         = google_cloudfunctions2_function.trueflag-etl.service_config[0].uri
 
     oidc_token {
-      service_account_email = "python@trueflag-459814.iam.gserviceaccount.com"
+      service_account_email = var.service_account
     }
   }
   depends_on = [google_project_service.required_apis]
