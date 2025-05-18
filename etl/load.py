@@ -156,7 +156,9 @@ def upload_raw_data(data, project_id, dataset_id, table_id, bq_client):
                                             write_disposition=write_disposition) #Añadimos las nuevas filas
         job = bq_client.load_table_from_json(data, table_ref, job_config=job_config)
         job.result()
-        print_success(f'{len(data)} registros subidos a {table_ref}')
+        msg = f'{len(data)} registros subidos a {table_ref}'
+        print_success(msg)
+        logging.info(msg)
     except Exception as e:
         msg = f"Error al cargar datos en BigQuery: {e}"
         logging.error(msg)
