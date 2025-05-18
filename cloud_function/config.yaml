@@ -1,0 +1,18 @@
+env-vars:
+  date_to_upload: '2024/08/08'   # 'today' -> carga los ficheros a fecha de hoy
+                                 # 'all' -> carga todos los archivos de cualquier fecha
+                                 # 'YYYY/MM/DD' -> carga los arhivos de una fecha específica
+  project_id: 'trueflag-459814'
+  region: "europe-west1"
+  credentials: "cred.json"
+  
+bucket:
+  bucket_name: 'nwt-data-engineer'
+  folders: [     # Carpetas del bucket para las cuales la ETL está preparada
+    'Tweet',
+    'YoutubeComment'
+    ]
+
+bigquery:
+  raw_tweet_table: 'raw_tweet'
+  raw_yt_comment_table: 'raw_youtube_comment'
