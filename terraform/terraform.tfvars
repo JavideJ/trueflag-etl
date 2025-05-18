@@ -1,3 +1,3 @@
-project_id = "trueflag-459814"
+project_id = "<your_project_id>"
 region     = "europe-west1"
 bq_location = "EU"
