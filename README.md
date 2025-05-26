@@ -4,7 +4,7 @@ La solución se podrá lanzar tando desde local mediante el main.py como desde G
 En la carpeta doc se puede ampliar información sobre la arquitectura y el diseño de la solución.
 
 ## Prerrequisitos
-Para poder hacer uso de este proyecto, primeri se necesita tener instalado:<br>
+Para poder hacer uso de este proyecto, primero se necesita tener instalado:<br>
 - [python]('https://www.python.org/downloads/') - versión 3.10
 - [git]('https://git-scm.com/downloads') - para clonar el repo
 - [terraform]('https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli') - para el despliegue de la infraestructura en Google Cloud
